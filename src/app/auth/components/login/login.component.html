@@ -1,3 +1,18 @@
 <div class="login-wrapper">
+  <form [formGroup]="loginForm">
+    <mat-form-field>
+      <mat-label>Username or email</mat-label>
+      <input type="text"
+             matInput
+             formControlName="username"
+             placeholder="Ex. pat@example.com">
+    </mat-form-field>
 
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input type="password"
+             matInput
+             formControlName="password">
+    </mat-form-field>
+  </form>
 </div>

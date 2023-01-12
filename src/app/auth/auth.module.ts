@@ -2,9 +2,9 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {LoginComponent} from "./components/login/login.component";
 import {AuthComponent} from './auth.component';
-import {RouterOutlet} from "@angular/router";
 import {AuthRouterModule} from "./auth-router.module";
-
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,9 @@ import {AuthRouterModule} from "./auth-router.module";
   ],
   imports: [
     CommonModule,
-    AuthRouterModule
+    AuthRouterModule,
+    ReactiveFormsModule,
+    MatInputModule
   ]
 })
 export class AuthModule {
