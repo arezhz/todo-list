@@ -14,5 +14,7 @@
              matInput
              formControlName="password">
     </mat-form-field>
+
+    <button mat-flat-button [disabled]="!loginForm.valid" color="primary">Login</button>
   </form>
 </div>
