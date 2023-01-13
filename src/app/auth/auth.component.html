@@ -9,6 +9,10 @@
         <img src="../../assets/images/logo.png" alt="logo">
       </div>
       <router-outlet></router-outlet>
+      <div class="auth-navigator">
+        <a [routerLink]="['sign-up']" *ngIf="isLogin">Create an account</a>
+        <a [routerLink]="['login']" *ngIf="!isLogin">You already have account</a>
+      </div>
     </div>
   </div>
 </div>
