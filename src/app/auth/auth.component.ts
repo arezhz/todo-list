@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-auth',
@@ -7,5 +8,9 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AuthComponent {
+  isLogin = false;
 
+  constructor(private router: Router) {
+    this.isLogin = router.url.includes('login');
+  }
 }
