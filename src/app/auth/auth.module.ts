@@ -6,6 +6,7 @@ import {AuthRouterModule} from "./auth-router.module";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from "@angular/material/button";
+import {FormErrorDirective} from "@shared/directives/form-error.directive";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {MatButtonModule} from "@angular/material/button";
         AuthRouterModule,
         ReactiveFormsModule,
         MatInputModule,
-        MatButtonModule
+        MatButtonModule,
+        FormErrorDirective
     ]
 })
 export class AuthModule {
