@@ -81,6 +81,11 @@
 
     a {
       color: $grey-6;
+      transition: all 400ms ease;
+
+      &:hover {
+        color: $indigo-3;
+      }
     }
   }
 }
