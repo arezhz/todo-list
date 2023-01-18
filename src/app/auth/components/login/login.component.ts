@@ -1,5 +1,6 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Inject} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {FORM_ERRORS} from "@shared/services/form-error-list";
 
 @Component({
   selector: 'app-login',
@@ -10,9 +11,10 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 export class LoginComponent {
   loginForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,
+              @Inject(FORM_ERRORS) private error: any) {
     this.loginForm = this.formBuilder.group({
-      username: new FormControl('', Validators.required),
+      username: new FormControl('', Validators.required, ),
       password: new FormControl('', Validators.required),
     })
   }
