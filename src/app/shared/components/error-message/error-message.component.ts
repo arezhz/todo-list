@@ -21,11 +21,8 @@ export class ErrorMessageComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // grab reference to MatFormField directive, where form control is accessible.
     const container = this._inj.get(MatFormField);
     this.inputRef = container._control;
-
-    // sub to the control's status stream
     this.inputRef.ngControl?.statusChanges?.subscribe(this.updateErrors);
   }
 
@@ -35,7 +32,11 @@ export class ErrorMessageComponent implements AfterViewInit {
       const controlErrors = this.inputRef.ngControl?.errors;
       if (controlErrors) {
         const firstError = Object.keys(controlErrors)[0];
-        this.errorText = this.error[firstError]();
+        if(firstError === 'minlength') {
+          this.errorText = this.error[firstError](controlErrors['minlength'].requiredLength);
+        } else {
+          this.errorText = this.error[firstError]();
+        }
       }
     }
   };

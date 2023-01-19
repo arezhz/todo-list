@@ -25,7 +25,7 @@
       background-image: url("~src/assets/images/auth.jpg");
       background-repeat: no-repeat;
       background-position: right center;
-      width: 60%;
+      width: 55%;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -70,7 +70,7 @@
 
     &-router {
       background: $white;
-      width: 40%;
+      width: 45%;
       padding: 1rem;
     }
   }
@@ -94,6 +94,7 @@
 .logo-wrapper {
   img {
     display: block;
-    max-width: 100%;
+    max-width: 70%;
+    margin: 0 auto 1rem;
   }
 }
