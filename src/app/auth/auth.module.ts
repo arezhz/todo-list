@@ -7,11 +7,13 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from "@angular/material/button";
 import {ErrorMessageComponent} from "@shared/components/error-message/error-message.component";
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
-    AuthComponent
+    AuthComponent,
+    SignUpComponent
   ],
   imports: [
     CommonModule,

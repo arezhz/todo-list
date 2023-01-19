@@ -1,5 +1,5 @@
-<div class="login-wrapper">
-  <form [formGroup]="loginForm">
+<div class="signup-wrapper">
+  <form [formGroup]="signUpForm">
     <mat-form-field>
       <mat-label>Email</mat-label>
       <input type="text"
@@ -17,8 +17,16 @@
       <mat-error matErrorMessages></mat-error>
     </mat-form-field>
 
-    <div class="login-btn">
-      <button mat-flat-button [disabled]="!loginForm.valid" color="primary">Login</button>
+    <mat-form-field>
+      <mat-label>Confirm Password</mat-label>
+      <input type="password"
+             matInput
+             formControlName="confirmPassword">
+      <mat-error matErrorMessages></mat-error>
+    </mat-form-field>
+
+    <div class="signup-btn">
+      <button mat-flat-button [disabled]="!signUpForm.valid" color="primary">Sign Up</button>
     </div>
   </form>
 </div>
