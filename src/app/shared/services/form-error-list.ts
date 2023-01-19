@@ -4,6 +4,7 @@ const errorList = {
   required: ()=> 'This field is required.',
   email: ()=> `Please enter your email address`,
   minlength: (minLength: number)=> `You must at least input ${minLength} character.`,
+  notSame: ()=> `Please enter correct value.`,
 }
 
 
