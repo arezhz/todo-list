@@ -14,7 +14,7 @@ export class LoginComponent {
   constructor(private formBuilder: FormBuilder,
               @Inject(FORM_ERRORS) private error: any) {
     this.loginForm = this.formBuilder.group({
-      username: new FormControl('', [Validators.required, Validators.email]),
+      email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required]),
     })
   }
