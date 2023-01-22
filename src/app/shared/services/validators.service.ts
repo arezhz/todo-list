@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {AbstractControl, ValidatorFn} from "@angular/forms";
+import {AbstractControl, ValidationErrors, ValidatorFn} from "@angular/forms";
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ export class ValidatorsService {
   }
 
   checkPassword(passwordControlName: string): ValidatorFn {
-    return (controlName: AbstractControl): { [key: string]: any } | null => {
+    return (controlName: AbstractControl): ValidationErrors | null => {
       const password = controlName.parent?.get(passwordControlName)?.value;
       return password !== controlName.value ? {notSame: true} : null;
     }
