@@ -1,0 +1,31 @@
+::ng-deep {
+  .menu-width {
+    width: 280px;
+  }
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  box-shadow: 0 0 0.75rem 0 rgba(0, 0, 0, .1);
+  background-color: rgba(255, 255, 255, .15);
+
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+
+  .logo-wrapper {
+    height: 100%;
+
+    img {
+      max-height: 100%;
+    }
+  }
+  .header-list {
+    display: flex;
+  }
+}

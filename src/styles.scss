@@ -38,6 +38,7 @@ $todo-list-theme: mat.define-light-theme((
 @import "assets/styles/base/palets";
 @import "assets/styles/base/variables";
 @import "assets/styles/base/form";
+@import "assets/styles/font-awesome";
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
